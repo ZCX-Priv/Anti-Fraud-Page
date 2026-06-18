@@ -4,7 +4,7 @@
 
 <div align="center">
 <h1>国家反诈中心提示页面</h1>
-<h2>（Anti-Fraud-Page）</h2>
+<p>（Anti-Fraud-Page）</p>
 </div>
 
 <p align="center">
