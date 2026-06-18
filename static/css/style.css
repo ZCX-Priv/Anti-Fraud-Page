@@ -227,42 +227,165 @@ html, body {
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        gap: 15px;
-        padding: 15px;
+        gap: 6px;
+        padding: 8px 15px;
     }
 
     .org-logo img {
-        max-height: 45px;
+        max-height: 38px;
     }
 
-    .main-icons {
-        gap: 30px;
+    .main-content {
+        padding: 10px 15px;
+    }
+
+    .main-sections {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .main-icons-row {
+        gap: 12px;
     }
 
     .main-icon img {
-        height: 80px;
+        height: 70px;
     }
 
-    .main-title {
-        font-size: 22px;
+    .main-titles-row {
+        gap: 4px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .title-separator {
+        font-size: 18px;
+        padding: 0 4px;
+    }
+
+    .divider {
+        margin-bottom: 10px;
+    }
+
+    .warning-box {
+        padding: 10px 15px;
+        margin-bottom: 10px;
     }
 
     .warning-text {
+        font-size: 16px;
+    }
+
+    .highlight {
+        font-size: 22px;
+    }
+
+    .contact-info {
+        font-size: 13px;
+        padding: 0 10px;
+        white-space: normal;
+    }
+
+    .footer {
+        padding: 8px 15px;
+    }
+
+    .qr-section {
+        margin-bottom: 6px;
+    }
+
+    .qr-row {
+        gap: 0;
+    }
+
+    .qr-codes-left,
+    .qr-codes-right {
+        gap: 12px;
+    }
+
+    .qr-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+    }
+
+    .qr-item img:first-child {
+        width: 75px;
+        height: 75px;
+    }
+
+    .platform-tag {
+        width: 55px !important;
+        height: auto !important;
+    }
+
+    .qr-divider {
+        width: 1px;
+        height: 75px;
+        margin: 0 15px;
+        align-self: center;
+    }
+
+    .beian {
+        font-size: 12px;
+        padding-top: 6px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .org-logo img {
+        max-height: 32px;
+    }
+
+    .main-icon img {
+        height: 55px;
+    }
+
+    .section-title {
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    .title-separator {
+        font-size: 13px;
+        padding: 0 2px;
+    }
+
+    .warning-text {
+        font-size: 14px;
+    }
+
+    .highlight {
         font-size: 18px;
     }
 
     .contact-info {
-        font-size: 14px;
+        font-size: 11px;
     }
 
-    .qr-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .qr-item img:first-child {
+        width: 60px;
+        height: 60px;
+    }
+
+    .platform-tag {
+        width: 45px !important;
     }
 
     .qr-divider {
-        width: 80%;
-        height: 1px;
+        height: 60px;
+        margin: 0 10px;
+    }
+
+    .qr-title {
+        font-size: 12px;
+    }
+
+    .beian {
+        font-size: 11px;
     }
 }
