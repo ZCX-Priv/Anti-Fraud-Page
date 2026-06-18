@@ -31,6 +31,7 @@ html, body {
 
 .org-logo {
     flex: 1;
+    min-width: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +39,7 @@ html, body {
 
 .org-logo img {
     max-height: 90px;
+    max-width: 100%;
     width: auto;
     object-fit: contain;
 }
@@ -60,8 +62,8 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: clamp(8px, 1.8vh, 15px);
+    margin-bottom: clamp(10px, 2.2vh, 20px);
 }
 
 .main-icons-row,
@@ -69,7 +71,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: clamp(10px, 2vh, 20px);
 }
 
 .main-icon {
@@ -79,15 +81,15 @@ html, body {
 }
 
 .main-icon img {
-    height: 160px;
+    height: clamp(80px, 18vh, 160px);
     width: auto;
     object-fit: contain;
 }
 
 .section-title {
-    font-size: 32px;
+    font-size: clamp(20px, 4vh, 32px);
     font-weight: normal;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.3vh, 2px);
     color: #fff;
     white-space: nowrap;
 }
@@ -101,11 +103,11 @@ html, body {
 }
 
 .title-separator {
-    font-size: 32px;
+    font-size: clamp(20px, 4vh, 32px);
     font-weight: normal;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.3vh, 2px);
     color: #fff;
-    padding: 0 10px;
+    padding: 0 clamp(4px, 1vh, 10px);
 }
 
 .divider {
@@ -113,30 +115,30 @@ html, body {
     max-width: 800px;
     height: 2px;
     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 15%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.3) 85%, transparent 100%);
-    margin: 0 auto 20px;
+    margin: 0 auto clamp(10px, 2vh, 20px);
 }
 
 .warning-box {
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 8px;
-    padding: 15px 40px;
-    margin-bottom: 15px;
+    padding: clamp(10px, 2vh, 15px) clamp(20px, 4vh, 40px);
+    margin-bottom: clamp(10px, 2vh, 15px);
     backdrop-filter: blur(5px);
 }
 
 .warning-text {
-    font-size: 24px;
+    font-size: clamp(16px, 3vh, 24px);
     color: #0a0a0a;
 }
 
 .highlight {
     color: #ff0000;
     font-weight: bold;
-    font-size: 32px;
+    font-size: clamp(22px, 4.5vh, 32px);
 }
 
 .contact-info {
-    font-size: 18px;
+    font-size: clamp(13px, 2vh, 18px);
     color: #fff;
     opacity: 0.95;
 }
@@ -224,6 +226,107 @@ html, body {
 }
 
 /* 响应式适配 */
+@media (max-width: 1024px) {
+    .header {
+        padding: 8px 30px;
+    }
+
+    .org-logo img {
+        max-height: 65px;
+    }
+
+    .main-content {
+        padding: 15px 30px;
+    }
+
+    .main-sections {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .main-icons-row {
+        gap: 30px;
+    }
+
+    .main-icon img {
+        height: 110px;
+    }
+
+    .main-titles-row {
+        gap: 10px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .title-separator {
+        font-size: 24px;
+        padding: 0 6px;
+    }
+
+    .divider {
+        margin-bottom: 15px;
+    }
+
+    .warning-box {
+        padding: 12px 30px;
+        margin-bottom: 12px;
+    }
+
+    .warning-text {
+        font-size: 18px;
+    }
+
+    .highlight {
+        font-size: 26px;
+    }
+
+    .contact-info {
+        font-size: 14px;
+        padding: 0 20px;
+        white-space: normal;
+    }
+
+    .footer {
+        padding: 8px 30px;
+    }
+
+    .qr-section {
+        margin-bottom: 8px;
+    }
+
+    .qr-codes-left,
+    .qr-codes-right {
+        gap: 30px;
+    }
+
+    .qr-title {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .qr-item img:first-child {
+        width: 90px;
+        height: 90px;
+    }
+
+    .platform-tag {
+        width: 60px !important;
+    }
+
+    .qr-divider {
+        height: 90px;
+        margin: 0 25px;
+    }
+
+    .beian {
+        font-size: 13px;
+        padding-top: 8px;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
